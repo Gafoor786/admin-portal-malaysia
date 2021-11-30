@@ -1,0 +1,31 @@
+.images-list {
+    img {
+        cursor: pointer;
+        opacity: 0.5;
+        max-width: 400px;
+        :hover {
+            border-color: gray;
+            // border-radius: 5px;
+        }
+    }
+    img:hover {
+        border-color: gray;
+        // border-radius: 10%;
+        opacity: 1;
+    }
+    img.active {
+        opacity: 1;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .images-list {
+        img {
+            cursor: pointer;
+            :hover {
+                border-color: rgb(233, 225, 225);
+                // border-radius: 10;
+            }
+        }
+    }
+}

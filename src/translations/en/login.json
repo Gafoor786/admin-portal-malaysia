@@ -1,0 +1,10 @@
+{
+    "login": {
+        "title": "Welcome to {{framework}}",
+        "sign-in": "Sign In",
+        "email-id": "Email Address",
+        "password": "Password",
+        "remember-me": "Remember me",
+        "forgot-password": "Forgot Password"
+    }
+}

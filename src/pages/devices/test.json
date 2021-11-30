@@ -1,0 +1,206 @@
+{
+    "name": "Dilip Device",
+    "description": "sample description for device ",
+    "deviceImage": {},
+    "rawConfig": [
+        {
+            "id": "38463aa8-fe28-4bbb-b27b-c4035eea35e3",
+            "token": "xxxxxxxxxx",
+            "dts": "$gmttime(%F %T)",
+            "status": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+            "data": {
+                "motor": {
+                    "amp": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "vib": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "vibration": "$tagValue(AS:PL1MotorAmpU,%.0lf)"
+                },
+                "lift": {
+                    "level": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "speed": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "vib": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "locStatus": "$tagValue(AS:PL1MotorAmpU,%.0lf)"
+                }
+            },
+            "event": {
+                "motor": {
+                    "amp": "$tagValue(AS:PL1MotorAmpU,%.0lf)"
+                },
+                "door": {
+                    "type": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "lock": "$tagValue(AS:PL1MotorAmpU,%.0lf)"
+                },
+                "lift": {
+                    "mode": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "weight": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "oper": "$tagValue(AS:PL1MotorAmpU,%.0lf)",
+                    "move": "$tagValue(AS:PL1MotorAmpU,%.0lf)"
+                },
+                "limit": "$tagValue(AS:PL1MotorAmpU,%.0lf)"
+            }
+        }
+    ],
+    "sensorsForm": [
+        {
+            "key": "motor.amp",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        },
+        {
+            "key": "motor.vib",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        },
+        {
+            "key": "motor.vibration",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        },
+        {
+            "key": "lift.level",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        },
+        {
+            "key": "lift.speed",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        },
+        {
+            "key": "lift.vib",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        },
+        {
+            "key": "lift.locStatus",
+            "name": "dilip",
+            "unit": "mg",
+            "min": "",
+            "max": "",
+            "graphType": "spline",
+            "icon": ""
+        }
+    ],
+    "eventsForm": [
+        {
+            "key": "motor.amp",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        },
+        {
+            "key": "door.type",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        },
+        {
+            "key": "door.lock",
+            "name": "dilip",
+            "enumsStr": "0 : Normal Mode\n1 : Priority Travel Mode\n2 : Special Service Mode\n3 : Fire Emergency Travel Mode\n4 : Evacuation Mode\n5 : Fireman Mode\n6 : Maintenance Inspection Mode\n7 : Out Of Service Mode\n8 : Emergency Mode\n9 : Parking Mode",
+            "enumObj": {
+                "0": "Normal Mode",
+                "1": "Priority Travel Mode",
+                "2": "Special Service Mode",
+                "3": "Fire Emergency Travel Mode",
+                "4": "Evacuation Mode",
+                "5": "Fireman Mode",
+                "6": "Maintenance Inspection Mode",
+                "7": "Out Of Service Mode",
+                "8": "Emergency Mode",
+                "9": "Parking Mode"
+            }
+        },
+        {
+            "key": "lift.mode",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        },
+        {
+            "key": "lift.weight",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        },
+        {
+            "key": "lift.oper",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        },
+        {
+            "key": "lift.move",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        },
+        {
+            "key": "limit",
+            "name": "dilip",
+            "enumsStr": "",
+            "enumObj": {}
+        }
+    ],
+    "chooseSensors": [
+        {
+            "key": "motor.amp",
+            "selected": true,
+            "priority": 3,
+            "displayName": "dilip (motor.amp)",
+            "id": "7dc4b45c-5c26-46d4-b3fd-375add0195ac"
+        },
+        {
+            "key": "motor.vib",
+            "selected": true,
+            "priority": 1,
+            "id": "c3044028-49cd-43a2-a3a5-aeaa96ef1482",
+            "displayName": "dilip (motor.vib)"
+        },
+        {
+            "key": "motor.vibration",
+            "selected": true,
+            "priority": 2,
+            "id": "7a7c1058-6580-4d5a-8b68-816dff7e6ab5",
+            "displayName": "dilip (motor.vibration)"
+        },
+        {
+            "key": "lift.level",
+            "selected": true,
+            "priority": 3,
+            "id": "a632795f-4112-4830-b577-2b068b3c2df1",
+            "displayName": "dilip (lift.level)"
+        },
+        {
+            "key": "lift.speed",
+            "selected": true,
+            "priority": 3,
+            "id": "994fb129-5b2d-483f-9584-7f30859a0f18",
+            "displayName": "dilip (lift.speed)"
+        }
+    ],
+    "themeId": 501
+}

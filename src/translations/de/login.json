@@ -1,0 +1,6 @@
+{
+    "login": {
+        "title": "Welcome to {{framework}}",
+        "sign-in": "Sign In"
+    }
+}
