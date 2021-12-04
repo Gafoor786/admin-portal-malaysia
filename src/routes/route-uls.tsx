@@ -8,6 +8,7 @@ import { SvgIconTypeMap } from '@mui/material';
 export const RouterLinks = {
     DEFAULT: '/',
     LOGIN: '/login',
+    LOGINMUI: '/loginMui',
     DASHBOARD: '/dashboard',
     FORGOT_PASSWORD: '/forgot-password',
     NOTFOUND: '/not-found',

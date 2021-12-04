@@ -28,6 +28,7 @@ export const AppRoutes = () => {
   return (
     <Switch>
       <AsyncRoute path={RouterLinks.LOGIN} importPath={import('@pages/Login')} />
+      <AsyncRoute path={RouterLinks.LOGINMUI} importPath={import('@pages/LoginMui')} />
       <AuthenticatedRoute path={RouterLinks.DASHBOARD} importPath={import('@pages/Dashboard')} />
       <AuthenticatedRoute path={RouterLinks.admin.INDEX} importPath={import('@pages/admin')} />
       <AuthenticatedRoute path={RouterLinks.user.INDEX} importPath={import('@pages/user')} />
