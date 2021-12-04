@@ -1,5 +1,18 @@
 import "./App.scss";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import {
+  Box,
+  Grid,
+  Paper,
+  Button,
+  Divider,
+  Drawer,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import React, { Suspense } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -7,11 +20,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AppNavBar from "@components/AppNavBar";
 import { AppRoutes } from "@utilities/AppRouter";
-import { Box, Grid, Paper } from "@mui/material";
 import { drawerWidth } from "@data/constants";
 import { useAuthContext } from "@utilities/State";
 import { styled, alpha } from "@mui/material/styles";
 import { theme } from "./theme";
+import { DashboardLayout } from "./components/dashboard-layout";
+import Dashboard from "@pages/Dashboardtest";
 // import { HashRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -54,73 +68,15 @@ function App() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {/* <AppNavBar /> */}
-
-      <Box
-        sx={{ display: "flex", height: "100%" }}
-        style={
-          {
-            // backgroundColor: prefersDarkMode ? '#14182A' : 'Highlight',
-          }
-        }
-      >
-        {state.authenticated ? (
-          <Box
-            component="nav"
-            sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
-            aria-label="mailbox folders"
-          ></Box>
-        ) : null}
-
-        <StyledBox
-          component="main"
-          sx={{
-            flexGrow: 1,
-            height: "100%",
-            // backgroundColor: { xs: "secondary.light", sm: "#0000ff" },
-          }}
-        >
-          <Grid>
-            <Grid
-              sx={{
-                padding: (theme) =>
-                  state.authenticated
-                    ? theme.spacing(1, 1, 1, 0)
-                    : theme.spacing(0),
-              }}
-            >
-              <StyledOuterBox
-                // sx={{ padding: (theme) => theme.spacing(state.authenticated ? 2 : 0) }}
-                style={
-                  {
-                    //  paddingTop: theme.mixins.toolbar.minHeight,
-                    // backgroundColor: 'aqua',
-                    // backgroundColor: prefersDarkMode ? DASHBOARD_BG : 'Highlight', // 1b2342  060D1f
-                    // border: state.authenticated ? 20 : 0,
-                    // minHeight: `calc(100vh - ${theme.spacing(state.authenticated ? 3 : 1)})`,
-                    // background: '#060d1f'
-                  }
-                }
-                component={Paper}
-              >
-                <Router>
-                  <AppNavBar />
-                  {/* <ResponsiveDrawer /> */}
-                  {/* <Dashboard /> */}
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <AppRoutes />
-                  </Suspense>
-                </Router>
-              </StyledOuterBox>
-            </Grid>
-          </Grid>
-        </StyledBox>
-      </Box>
-
-      {/* <SideMenu /> */}
-    </ThemeProvider>
+    <>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <DashboardLayout>
+            <Dashboard />
+          </DashboardLayout>
+        </ThemeProvider>
+      </Router>
+    </>
   );
 }
 
